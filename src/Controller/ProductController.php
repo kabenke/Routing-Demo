@@ -11,11 +11,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 
-
-
-
-
-
 /**
  * @Route("/products",name="products_")
  */
@@ -27,7 +22,7 @@ class ProductController extends  AbstractController
      */
     public function index()
     {
-        return $this ->render('product.html.twig',[]);
+        return $this ->render('show.html.twig',[]);
     }
 
 
@@ -43,8 +38,10 @@ class ProductController extends  AbstractController
      * @return Response
      * @Route("/inventory" , name="inventory")
      */
-    public function inventory()
+    public function invententor()
     {
         return new Response('This the product inventory');
     }
+
+
 }
